@@ -6,32 +6,23 @@ namespace Polimorfismo
     {
         static void Main(string[] args)
         {
-            Funcionario funcionario = new Funcionario();
-
-            funcionario.Nome = "Levi";
-
-            funcionario.Salario = 3000;
+            List<Animal> animais = new List<Animal>();
 
 
-            Gerente gerente = new Gerente();
+            animais.Add(new Leao());
 
-            gerente.Nome = "Lia";
+            animais.Add(new Macaco());
 
-            gerente.Salario = 5000;
-
-
-            Desenvolvedor desenvolvedor = new Desenvolvedor();
-
-            desenvolvedor.Nome = "José";
-
-            desenvolvedor.Salario = 4000;
+            animais.Add(new Cobra());
 
 
-            Console.WriteLine($"Bônus do funcionário: R$ {funcionario.CalcularBonusAnual():F2}");
+            foreach (Animal animal in animais)
 
-            Console.WriteLine($"Bônus do gerente: R$ {gerente.CalcularBonusAnual():F2}");
+            {
 
-            Console.WriteLine($"Bônus do desenvolvedor: R$ {desenvolvedor.CalcularBonusAnual():F2}");
+                animal.EmitirSom();
+
+            }
         }
     }
 }

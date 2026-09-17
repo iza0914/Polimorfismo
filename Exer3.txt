@@ -1,0 +1,60 @@
+ public class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Animal> animais = new List<Animal>();
+
+
+            animais.Add(new Leao());
+
+            animais.Add(new Macaco());
+
+            animais.Add(new Cobra());
+
+
+            foreach (Animal animal in animais)
+
+            {
+
+                animal.EmitirSom();
+
+            }
+        }
+    }
+
+
+     public class Animal
+    {
+        public virtual void EmitirSom()
+        {
+            Console.WriteLine("O animal está emitindo um som.");
+        }
+    }
+
+
+    public class Leao : Animal
+    {
+        public override void EmitirSom()
+
+        {
+            Console.WriteLine("Roar!");
+        }
+    }
+
+
+     public class Macaco : Animal
+    {
+        public override void EmitirSom()
+        {
+            Console.WriteLine("Ugh ugh aah aah!");
+        }
+    }
+
+
+    public class Cobra : Animal
+    {
+        public override void EmitirSom()
+        {
+            Console.WriteLine("Sssssss...");
+        }
+    }
