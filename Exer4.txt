@@ -1,9 +1,4 @@
-﻿using Polimorfismo;
-using System.Runtime.CompilerServices;
-
-namespace Polimorfismo
-{
-    public class Program
+public class Program
     {
         static void Main(string[] args)
         {
@@ -28,4 +23,4 @@ namespace Polimorfismo
             email.Enviar("relatorio.pdf");
         }
     }
-}
+
