@@ -24,3 +24,39 @@ public class Program
         }
     }
 
+
+    public class Inotificacao
+    {
+        public void Enviar();
+    }
+
+
+    public class NotificacaoEmail : Inotificacao
+    {
+        public void Enviar()
+        {
+            Console.WriteLine("Enviando notificação por email...");
+        }
+
+        public void Enviar(string anexo)
+        {
+            Console.WriteLine($"Enviando email com anexo: {anexo}");
+        }
+    }
+
+
+    public class NotificacaoSMS : Inotificacao
+    {
+        public void Enviar()
+        {
+            Console.WriteLine("Enviando notificação por SMS...");
+        }
+    }
+
+    public class NotificacaoPush : Inotificacao
+    {
+        public void Enviar()
+        {
+            Console.WriteLine("Enviando notificação push para o app...");
+        }
+    }
